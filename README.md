@@ -1,17 +1,5 @@
 # 🗑️ SmartWaste Management System
 
-### ESP32 • Embedded Systems • IoT • Sensor Interfacing • Cloud Monitoring
-
-> An industry-oriented student prototype for intelligent waste monitoring using ESP32, ultrasonic sensing, automated lid control, local alerts, OLED visualization, and ThingSpeak cloud monitoring.
-
-<p align="center">
-
-![ESP32](https://img.shields.io/badge/ESP32-Embedded%20Controller-000000?style=for-the-badge&logo=espressif)
-![C++](https://img.shields.io/badge/C%2FC%2B%2B-Firmware-00599C?style=for-the-badge&logo=cplusplus)
-![IoT](https://img.shields.io/badge/IoT-Connected%20System-0A84FF?style=for-the-badge)
-![Wokwi](https://img.shields.io/badge/Wokwi-Simulation-8B5CF6?style=for-the-badge)
-![ThingSpeak](https://img.shields.io/badge/ThingSpeak-Cloud%20Monitoring-FF6B35?style=for-the-badge)
-
 <p align="center">
   <img src="circuit_diagram/circuit.png" alt="Smart Dustbin Circuit Diagram" width="850">
 </p>
