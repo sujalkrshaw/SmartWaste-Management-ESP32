@@ -1,4 +1,3 @@
-````markdown
 # 🗑️ Smart Dustbin Embedded System
 
 > **An ESP32-based embedded IoT system that combines contactless lid automation, waste-level monitoring, real-time alerts, and cloud-based telemetry into a practical smart-waste solution.**
