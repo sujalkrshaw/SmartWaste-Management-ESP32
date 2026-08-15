@@ -12,10 +12,6 @@
 ![Wokwi](https://img.shields.io/badge/Wokwi-Simulation-8B5CF6?style=for-the-badge)
 ![ThingSpeak](https://img.shields.io/badge/ThingSpeak-Cloud%20Monitoring-FF6B35?style=for-the-badge)
 
-</p>
----
-# 🗑️ Smart Dustbin Embedded System
-
 <p align="center">
   <img src="circuit_diagram/circuit.png" alt="Smart Dustbin Circuit Diagram" width="850">
 </p>
