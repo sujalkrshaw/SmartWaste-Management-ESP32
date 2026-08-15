@@ -1,0 +1,59 @@
+
+---
+
+# 5. `.gitignore`
+
+This prevents accidental secrets and unnecessary files from entering GitHub.
+
+```gitignore
+# Arduino / PlatformIO
+.pio/
+.vscode/
+*.elf
+*.bin
+*.hex
+*.eep
+
+# Arduino temporary files
+*.bak
+*.tmp
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+*.iml
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# API keys / credentials
+secrets.h
+credentials.h
+config_private.h
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node
+node_modules/
+
+# Build output
+dist/
+build/

@@ -1,0 +1,181 @@
+# Smart Dustbin – Test Report
+
+## 1. Test Objective
+
+The objective of testing is to verify the functionality of the ESP32-based Smart Dustbin system, including:
+
+- Waste-level measurement
+- Fill-percentage calculation
+- Automatic lid control
+- Full-bin detection
+- LED and buzzer alerts
+- OLED monitoring
+- Wi-Fi connectivity
+- ThingSpeak cloud communication
+
+---
+
+## 2. Test Environment
+
+| Parameter | Details |
+|---|---|
+| Simulation Platform | Wokwi |
+| Microcontroller | ESP32 |
+| Waste Sensor | HC-SR04 |
+| Hand Detection Sensor | HC-SR04 |
+| Display | 0.96-inch OLED |
+| Actuator | Servo Motor |
+| Alert | Buzzer |
+| Indicators | Red & Green LEDs |
+| Cloud Platform | ThingSpeak |
+
+---
+
+## 3. Test Cases
+
+### Test Case 1 – Wi-Fi Connectivity
+
+**Procedure:**
+1. Start the ESP32 simulation.
+2. Allow the ESP32 to connect to Wi-Fi.
+3. Monitor the Serial Monitor.
+
+**Expected Result:**
+ESP32 connects successfully to the Wi-Fi network.
+
+**Observed Result:**
+Wi-Fi connected successfully.
+
+**Status:** PASS
+
+---
+
+### Test Case 2 – Hand Detection
+
+**Procedure:**
+1. Set the hand-detection HC-SR04 distance below 10 cm.
+2. Observe the servo and Serial Monitor.
+
+**Expected Result:**
+The lid should open.
+
+**Observed Result:**
+At approximately 2 cm, the system reported:
+
+`Lid Status: OPEN`
+
+**Status:** PASS
+
+---
+
+### Test Case 3 – Automatic Lid Closing
+
+**Procedure:**
+1. Move the simulated hand away from the sensor.
+2. Set the hand distance above 10 cm.
+
+**Expected Result:**
+The lid should close.
+
+**Observed Result:**
+At approximately 63.5 cm, the system reported:
+
+`Lid Status: CLOSED`
+
+**Status:** PASS
+
+---
+
+### Test Case 4 – Fill-Level Calculation
+
+**Procedure:**
+1. Change the waste-level sensor distance.
+2. Observe the calculated fill percentage.
+
+**Expected Result:**
+Fill percentage should increase as the waste distance decreases.
+
+**Observed Result:**
+At approximately 2 cm waste distance, the calculated fill level reached approximately 90.1%.
+
+**Status:** PASS
+
+---
+
+### Test Case 5 – Full Bin Detection
+
+**Procedure:**
+1. Set the waste sensor distance to approximately 2 cm.
+2. Observe the Serial Monitor.
+
+**Expected Result:**
+The system should identify the bin as FULL / ALERT.
+
+**Observed Result:**
+
+`Fill Level: 90.1%`
+
+`Bin Status: FULL / ALERT`
+
+**Status:** PASS
+
+---
+
+### Test Case 6 – ThingSpeak Communication
+
+**Procedure:**
+1. Connect ESP32 to Wi-Fi.
+2. Allow the system to send sensor data to ThingSpeak.
+3. Check the HTTP response.
+
+**Expected Result:**
+ThingSpeak should accept the data.
+
+**Observed Result:**
+
+`HTTP Code: 200`
+
+`ThingSpeak UPDATE SUCCESS`
+
+**Status:** PASS
+
+---
+
+## 4. ThingSpeak Data Mapping
+
+| Field | Parameter |
+|---|---|
+| Field 1 | Fill Percentage |
+| Field 2 | Waste Distance |
+| Field 3 | Bin Status |
+| Field 4 | Lid Status |
+| Field 5 | Hand Distance |
+| Field 6 | Bin ID |
+| Field 7 | Connectivity |
+
+---
+
+## 5. Overall Test Result
+
+| Function | Result |
+|---|---|
+| Wi-Fi Connectivity | PASS |
+| Waste-Level Detection | PASS |
+| Fill-Level Calculation | PASS |
+| Full-Bin Detection | PASS |
+| Automatic Lid Opening | PASS |
+| Automatic Lid Closing | PASS |
+| OLED Monitoring | PASS |
+| LED Alert Logic | PASS |
+| Buzzer Alert Logic | PASS |
+| ThingSpeak Communication | PASS |
+
+**Overall Status: PASS**
+
+---
+
+## 6. Conclusion
+
+The Wokwi simulation successfully demonstrates the core functionality of the Smart Dustbin system.
+
+The system can monitor waste level, calculate fill percentage, detect a nearby hand, automatically control the lid, generate full-bin alerts, display information locally, and transmit monitoring data to ThingSpeak through Wi-Fi.
