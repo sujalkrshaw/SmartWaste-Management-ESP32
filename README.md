@@ -13,9 +13,7 @@
 ![ThingSpeak](https://img.shields.io/badge/ThingSpeak-Cloud%20Monitoring-FF6B35?style=for-the-badge)
 
 </p>
-
 ---
-````markdown
 # 🗑️ Smart Dustbin Embedded System
 
 <p align="center">
